@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+h2{
+    color: #368a42;
+    font-size: 56px;
+    align-items: center;
+    margin-top: 1%;
+    margin: 10px 50px 20px;
+}
+
+h1{
+    color: #368a42;
+    font-size: 45px;
+    align-items: center;
+    margin-top: 1%;
+    margin: 10px 50px 20px;
+}
+
+p{
+    color: #ffffff;
+    font-size: 23px;
+    margin: 10px 50px 20px;
+}
+
+:root{
+    --white:#ffffff;
+    --dark:#000000;
+    --green:#1c6e28;
+}
+body{
+    color: var(--green);
+    background: var(--dark);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--dark);
+    transition: all 0.5s;
+    position: fixed;
+}
+.navigation .logo{
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--green);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--green);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--dark);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--green);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--white);
+}
+
+footer {
+	color: #ffffff;
+	padding: 2px;
+	text-align: center;
+    position: absolute;
+    background-color: #050505;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+}
